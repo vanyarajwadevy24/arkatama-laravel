@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/landing', [\App\Http\Controllers\LandingController::class, 'index']);
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
