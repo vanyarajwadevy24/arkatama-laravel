@@ -12,20 +12,22 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::resource('/roles', \App\Http\Controllers\RoleController::class);
-Route::resource('/users', \App\Http\Controllers\UserController::class);
-Route::resource('/sliders', \App\Http\Controllers\SliderController::class);
-
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/landing', [\App\Http\Controllers\LandingController::class, 'index']);
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('/landing', [\App\Http\Controllers\LandingController::class,'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
 
-Route::resource('/roles', \App\Http\Controllers\RoleController::class);
+Route::resource('/roles',\App\Http\Controllers\RoleController::class);
+Route::resource('/users',\App\Http\Controllers\UserController::class);
+Route::resource('/sliders',\App\Http\Controllers\SliderController::class);
+Route::resource('/products',\App\Http\Controllers\ProductsController::class);
