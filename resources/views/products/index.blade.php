@@ -3,18 +3,18 @@
 
                     <div class="card mb-4 mt-3">
                             <div class="card-header">
-                                <a href="{{ route('products.create') }}" class="btn btn-success">Tambah</a>
+                                <a href="{{ route('products.create') }}" class="btn btn-success">Create</a>
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
+                                            <th>No</th>
                                             <th>Aksi</th>
-                                            <th>Gambar</th>
-                                            <th>Nama Produk</th>
-                                            <th>Harga</th>
-                                            <th>Kategori</th>
+                                            <th>Photo</th>
+                                            <th>Product Name</th>
+                                            <th>Price</th>
+                                            <th>Category</th>
                                         </tr>
                                     </thead>
                                     <tbody>

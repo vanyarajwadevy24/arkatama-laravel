@@ -8,19 +8,19 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h2>Tambah</h2>
+                    <h2>Create</h2>
                     <div class="form-group mb-2">
                         <label for="caption">Caption</label>
                         <textarea type="text" class="form-control @error('caption') is-invalid @enderror" id="caption" placeholder="caption" name="caption">{{ $slider->caption }}</textarea>
                         @error('caption') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
                     <div class="form-group mb-2">
-                        <label for="deskripsi">Deskripsi</label>
+                        <label for="deskripsi">Description</label>
                         <textarea type="text" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" placeholder="Deskripsi" name="deskripsi">{{ $slider->deskripsi }}</textarea>
                         @error('deskripsi') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
                     <div class="form-group mb-2">
-                        <label for="gambar" class="form-label">Pilih Slider</label>
+                        <label for="gambar" class="form-label">Choose Sliders</label>
                         <input type="hidden" name="oldImage" value="{{ $slider->gambar  }}">
                         @if($slider->gambar)
                         <img src="{{ asset('storage/' . $slider->gambar) }}" class="img-preview img-fluid mb-3 col-sm-5 d-block">
@@ -36,7 +36,7 @@
                         @enderror
                       </div>
                     <div class="card-footer mb-2">
-                    <button type="submit" class="btn btn-success">Simpan</button>
+                    <button type="submit" class="btn btn-success">Save</button>
                 </div>
             </div>
         </div>

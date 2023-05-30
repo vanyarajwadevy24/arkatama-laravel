@@ -9,11 +9,11 @@
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
+                                            <th>No</th>
                                             <th>Aksi</th>
                                             <th>Caption</th>
-                                            <th>Deskripsi</th>
-                                            <th>Gambar</th>
+                                            <th>Description</th>
+                                            <th>Photo</th>
                                         </tr>
                                     </thead>
                                     <tbody>

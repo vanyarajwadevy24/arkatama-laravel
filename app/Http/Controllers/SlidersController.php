@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\StoreSliderRequest;
 use App\Http\Requests\UpdateSliderRequest;
 
-class SliderController extends Controller
+class SlidersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -39,7 +39,7 @@ class SliderController extends Controller
      * @param  \App\Http\Requests\StoreSliderRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Sliders $sliders)
+    public function store(Request $request, Slider $slider)
     {
         $validasi = $request->validate([
             'caption' => 'required',
@@ -60,7 +60,7 @@ class SliderController extends Controller
      * @param  \App\Models\Slider  $slider
      * @return \Illuminate\Http\Response
      */
-    public function show(Sliders $sliders)
+    public function show(Slider $slider)
     {
         //
     }
@@ -71,10 +71,10 @@ class SliderController extends Controller
      * @param  \App\Models\Slider  $slider
      * @return \Illuminate\Http\Response
      */
-    public function edit(Sliders $sliders)
+    public function edit(Slider $slider)
     {
         return view('sliders.edit',[
-            'sliders' => $sliders
+            'slider' => $slider
         ]);
     }
 
@@ -82,10 +82,10 @@ class SliderController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \App\Http\Requests\UpdateSliderRequest  $request
-     * @param  \App\Models\Sliders  $sliders
+     * @param  \App\Models\Slider  $slider
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Sliders $sliders)
+    public function update(Request $request, Slider $slider)
     {
         $validasi = $request->validate([
             'gambar' => 'image|file|max:3000',
@@ -109,7 +109,7 @@ class SliderController extends Controller
      * @param  \App\Models\Slider  $slider
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Sliders $sliders)
+    public function destroy(Slider $slider)
     {
         if ($slider->gambar){
             Storage::delete($slider->gambar);

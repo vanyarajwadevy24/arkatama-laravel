@@ -15,7 +15,7 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Aksi</th>
-                                            <th>Nama</th>
+                                            <th>Name</th>
                                             <th>Email</th>
                                             <th>Role</th>
                                         </tr>

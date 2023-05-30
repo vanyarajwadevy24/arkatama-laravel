@@ -18,4 +18,3 @@ class Products extends Model
         'file'
     ];
 }
-

@@ -29,5 +29,5 @@ Route::get('/dashboard', function () {
 
 Route::resource('/roles',\App\Http\Controllers\RoleController::class);
 Route::resource('/users',\App\Http\Controllers\UserController::class);
-Route::resource('/sliders',\App\Http\Controllers\SliderController::class);
 Route::resource('/products',\App\Http\Controllers\ProductsController::class);
+Route::resource('/sliders',\App\Http\Controllers\SlidersController::class);

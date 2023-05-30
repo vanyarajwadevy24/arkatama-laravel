@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <h2>Edit</h2>
                     <div class="form-group mb-2">
-                        <label for="name">Nama</label>
+                        <label for="name">Name</label>
                         <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" placeholder="Nama lengkap" name="name" value="{{ $user->name}}">
                         @error('name') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
@@ -38,14 +38,14 @@
                         @error('password') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
                     <div class="form-group mb-2">
-                        <label for="password">Konfirmasi Password</label>
+                        <label for="password">Confirm Password</label>
                         <input type="password" class="form-control" id="password" placeholder="Konfirmasi Password" name="password_confirmation" value="{{ $user->password}}">
                     </div>
 
                 </div>
 
                 <div class="card-footer mb-2">
-                    <button type="submit" class="btn btn-success">Simpan</button>
+                    <button type="submit" class="btn btn-success">Save</button>
                 </div>
             </div>
         </div>
