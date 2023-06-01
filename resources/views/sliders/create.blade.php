@@ -7,19 +7,19 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h2>Create</h2>
+                    <h2>Tambah</h2>
                     <div class="form-group mb-2">
                         <label for="caption">Caption</label>
-                        <input type="text" class="form-control @error('caption') is-invalid @enderror" id="caption" name="caption">
+                        <input type="text" class="form-control @error('caption') is-invalid @enderror" id="caption" placeholder="caption" name="caption">
                         @error('caption') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
                     <div class="form-group mb-2">
-                        <label for="deskripsi">Description</label>
-                        <textarea type="text" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" name="deskripsi"></textarea>
+                        <label for="deskripsi">Deskripsi</label>
+                        <textarea type="text" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" placeholder="Deskripsi" name="deskripsi"></textarea>
                         @error('deskripsi') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
                     <div class="form-group mb-2">
-                        <label for="gambar" class="form-label">Choose Slider</label>
+                        <label for="gambar" class="form-label">Pilih Slider</label>
                         <img class="img-preview img-fluid mb-3 col-sm-5">
                         <input class="form-control @error('gambar') is-invalid @enderror"  type="file" id="gambar" name="gambar"
                         onchange="previewImage()">
@@ -31,7 +31,7 @@
                     </div>
                     
                     <div class="card-footer mb-2">
-                    <button type="submit" class="btn btn-success">Save</button>
+                    <button type="submit" class="btn btn-success">Simpan</button>
                 </div>
             </div>
         </div>
