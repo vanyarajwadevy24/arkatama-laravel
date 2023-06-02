@@ -12,7 +12,8 @@
                                             <th>No</th>
                                             <th>Aksi</th>
                                             <th>Photo</th>
-                                            <th>Product Name</th>
+                                            <th>Name Products</th>
+                                            <th>Description</th>
                                             <th>Price</th>
                                             <th>Category</th>
                                         </tr>
@@ -35,7 +36,8 @@
                                                 </form>
                                             </td>
                                             <td><img src="{{ asset('storage/' . $product->gambar )}}" class="img-fluid rounded-circle" width="100px"></td>
-                                            <td>{{ $product->nama_product }}</td>
+                                            <td>{{ $product->nama }}</td>
+                                            <td>{{ $product->deskripsi }}</td>
                                             <td>{{ $product->harga }}</td>
                                             <td>{{ $product->categories->category_name }}</td>
                                         </tr>

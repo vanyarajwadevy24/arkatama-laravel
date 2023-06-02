@@ -8,15 +8,15 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h2>Tambah</h2>
+                    <h2>Create</h2>
                     <div class="form-group mb-2">
                         <label for="caption">Caption</label>
                         <textarea type="text" class="form-control @error('caption') is-invalid @enderror" id="caption" placeholder="caption" name="caption">{{ $slider->caption }}</textarea>
                         @error('caption') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
                     <div class="form-group mb-2">
-                        <label for="deskripsi">Deskripsi</label>
-                        <textarea type="text" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" placeholder="Deskripsi" name="deskripsi">{{ $slider->deskripsi }}</textarea>
+                        <label for="deskripsi">Description</label>
+                        <textarea type="text" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" name="deskripsi">{{ $slider->deskripsi }}</textarea>
                         @error('deskripsi') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
                     <div class="form-group mb-2">
@@ -36,7 +36,7 @@
                         @enderror
                       </div>
                     <div class="card-footer mb-2">
-                    <button type="submit" class="btn btn-success">Simpan</button>
+                    <button type="submit" class="btn btn-success">Save</button>
                 </div>
             </div>
         </div>

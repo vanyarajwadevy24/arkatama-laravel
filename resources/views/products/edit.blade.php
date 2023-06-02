@@ -10,28 +10,23 @@
                 <div class="card-body">
                     <h2>Edit</h2>
                     <div class="form-group mb-2">
-                        <label for="nama_product">Nama Produk</label>
-                        <input type="text" class="form-control @error('nama_product') is-invalid @enderror" id="nama_product"  name="nama_product" value="{{ $product->nama_product ?? old('nama_product') }}">
-                        @error('nama_product') <span class="text-danger">{{$message}}</span> @enderror
+                        <label for="nama">Name Product</label>
+                        <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama"  name="nama" value="{{ $product->nama ?? old('nama') }}">
+                        @error('nama') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
                     <div class="form-group mb-2">
-                        <label for="deskripsi">Deskripsi</label>
-                        <textarea type="text" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" placeholder="Deskripsi" name="deskripsi" >{{ $product->deskripsi ?? old('deskripsi') }}</textarea>
+                        <label for="deskripsi">Description</label>
+                        <textarea type="text" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" name="deskripsi" >{{ $product->deskripsi ?? old('deskripsi') }}</textarea>
                         @error('deskripsi') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
                     <div class="form-group mb-2">
-                        <label for="harga">Harga</label>
-                        <input type="number" class="form-control @error('harga') is-invalid @enderror" id="harga" placeholder="Masukkan Harga" name="harga" value="{{ $product->harga ?? old('harga') }}">
+                        <label for="harga">Price</label>
+                        <input type="number" class="form-control @error('harga') is-invalid @enderror" id="harga" name="harga" value="{{ $product->harga ?? old('harga') }}">
                         @error('harga') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
-                    <div class="form-group mb-2">
-                        <label for="rating">Rating</label>
-                        <input type="number" class="form-control @error('rating') is-invalid @enderror" id="rating" placeholder="Masukkan rating" name="rating" value="{{ $product->rating ?? old('rating') }}">
-                        @error('rating') <span class="text-danger">{{$message}}</span> @enderror
-                    </div>
 
                     <div class="form-group mb-2">
                         <label for="role">Category</label>
@@ -44,19 +39,9 @@
                         </select>
                         @error('category_id') <span class="text-danger">{{ $message }}</span> @enderror
                     </div>
-                    
-                    
-
                     <div class="form-group mb-2">
-                        <label for="gambar" class="form-label">Pilih Gambar</label>
-                        <input type="hidden" name="oldImage" value="{{ $product->gambar  }}">
-                        @if($product->gambar)
-                        <img src="{{ asset('storage/' . $product->gambar) }}" class="img-preview img-fluid mb-3 col-sm-5 d-block">
-                        @else
-                        <img class="img-preview img-fluid mb-3 col-sm-5">
-                        @endif
-                        <input class="form-control @error('gambar') is-invalid @enderror"  type="file" id="gambar" name="gambar"
-                        onchange="previewImage()">
+                        <label for="gambar" class="form-label">Choose Photo</label>
+                        <input class="form-control @error('gambar') is-invalid @enderror"  type="file" id="gambar" name="gambar">
                         @error('gambar')
                         <div class="invalid-feedback">
                           {{ $message }}
@@ -66,24 +51,10 @@
                 </div>
 
                 <div class="card-footer mb-2">
-                    <button type="submit" class="btn btn-success">Simpan</button>
+                    <button type="submit" class="btn btn-success">Save</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
-   
-    <script>
-        function previewImage(){
-            const image = document.querySelector('#gambar');
-            const imgPreview = document.querySelector('.img-preview');
-            imgPreview.style.display = 'block';
-            const oFReader = new FileReader();
-            oFReader.readAsDataURL(image.files[0]);
-            oFReader.onload = function(oFREvent){
-            imgPreview.src = oFREvent.target.result;
-      }
-       
-    }
-    </script>
 @stop
