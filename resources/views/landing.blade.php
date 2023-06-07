@@ -10,7 +10,7 @@
 </head>
 <body>
     <section id="navbar">
-            <nav class="navbar navbar-expand-lg bg-dark ">
+            <nav class="navbar navbar-expand-lg" >
                 <div class="container">
                   <a class="navbar-brand text-white" href="#"></a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,17 +19,17 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active text-secondary" aria-current="page" href="#">Home</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link text-white" href="#content">Products</a>
+                        <a class="nav-link text-secondary" href="#content">Products</a>
                       </li>
                       <li class="nav-item ">
-                        <a class="nav-link text-white " href="#footer">About</a>
+                        <a class="nav-link text-seconddary " href="#footer">About</a>
                       </li>
                     </ul>
                     <form class="d-flex" role="search" action="/login">  
-                        <button class="btn btn-outline-primary" type="submit">Login</button>
+                        <button class="btn btn-sm btn-outline-secondary" type="submit">Login</button>
                     </form>
                   </div>
                 </div>
