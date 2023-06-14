@@ -20,7 +20,7 @@
                         @error('deskripsi') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
                     <div class="form-group mb-2">
-                        <label for="gambar" class="form-label">Pilih Slider</label>
+                        <label for="gambar" class="form-label">Choose Slider</label>
                         <input type="hidden" name="oldImage" value="{{ $slider->gambar  }}">
                         @if($slider->gambar)
                         <img src="{{ asset('storage/' . $slider->gambar) }}" class="img-preview img-fluid mb-3 col-sm-5 d-block">

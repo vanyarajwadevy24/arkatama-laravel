@@ -19,17 +19,17 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link active text-secondary" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active text-danger" aria-current="page" href="#">Home</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link text-secondary" href="#content">Products</a>
+                        <a class="nav-link active text-danger" href="#content">Products</a>
                       </li>
                       <li class="nav-item ">
-                        <a class="nav-link text-seconddary " href="#footer">About</a>
+                        <a class="nav-link active text-danger" href="#footer">About</a>
                       </li>
                     </ul>
                     <form class="d-flex" role="search" action="/login">  
-                        <button class="btn btn-sm btn-outline-secondary" type="submit">Login</button>
+                        <button class="btn btn-outline-danger" type="submit">Login</button>
                     </form>
                   </div>
                 </div>
@@ -67,7 +67,7 @@
     </section>
     <section id="content">
         <div class="container pt-5 pb-5">
-            <h2 class="mb-3 fw-bold">
+            <h2 class="mb-3 fst-normal">
                 Products
             </h2>
             <div class="row g-4">
@@ -79,7 +79,7 @@
                           <h5 class="card-title">{{ $product->nama }}</h5>
                           <p class="card-text">{{ $product->harga }}</p>
                           <p class="card-text">{{ $product->deskripsi }}</p>
-                          <a href="#" class="btn btn-primary">Buy</a>
+                          <a href="#" class="btn btn-danger">Buy</a>
                         </div>
                       </div>
                 </div>
@@ -93,9 +93,9 @@
 <footer class="bg-dark text-center text-white">
     <!-- Grid container -->
     <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2020 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/"></a>
+    <div class="text-center p-3 bg-white text-danger">
+      Vanya Rajwadevy 
+      <a class="text-danger" href="https://mdbootstrap.com/"></a>
     </div>
     <!-- Copyright -->
   </footer>
