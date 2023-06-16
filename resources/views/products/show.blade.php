@@ -9,27 +9,21 @@
                 <div class="card-body">
                     <h2>Detail</h2>
                     <div class="form-group mb-2">
-                        <label for="nama_product">Nama Produk</label>
-                        <input type="text" class="form-control @error('nama_product') is-invalid @enderror" id="nama_product"  name="nama_product" value="{{ $product->nama_product ?? old('nama_product') }}" disabled>
-                        @error('nama_product') <span class="text-danger">{{$message}}</span> @enderror
+                        <label for="nama">Name products</label>
+                        <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama"  name="nama" value="{{ $product->nama ?? old('nama') }}" disabled>
+                        @error('nama') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
                     <div class="form-group mb-2">
-                        <label for="deskripsi">Deskripsi</label>
+                        <label for="deskripsi">Description</label>
                         <input type="text" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" placeholder="Deskripsi" name="deskripsi" value="{{ $product->deskripsi ?? old('deskripsi') }}" disabled>
                         @error('deskripsi') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
                     <div class="form-group mb-2">
-                        <label for="harga">Harga</label>
+                        <label for="harga">Price</label>
                         <input type="number" class="form-control @error('harga') is-invalid @enderror" id="harga" placeholder="Masukkan Harga" name="harga" value="{{ $product->harga ?? old('harga') }}" disabled>
                         @error('harga') <span class="text-danger">{{$message}}</span> @enderror
-                    </div>
-
-                    <div class="form-group mb-2">
-                        <label for="rating">Rating</label>
-                        <input type="number" class="form-control @error('rating') is-invalid @enderror" id="rating" placeholder="Masukkan rating" name="rating" value="{{ $product->rating ?? old('rating') }}" disabled>
-                        @error('rating') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
 
                     <div class="form-group mb-2">

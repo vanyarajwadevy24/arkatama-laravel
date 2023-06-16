@@ -1,6 +1,6 @@
 <div id="layoutSidenav">
     <div id="layoutSidenav_nav">
-    <nav class="sb-sidenav accordion sb-sidenav-dark bg-danger text-white" >
+        <nav class="sb-sidenav accordion sb-sidenav-dark bg-danger" id="sidenavAccordion">
             <div class="sb-sidenav-menu">
                 <div div style="font-family:Century Schoolbook" class="nav">
                     <div class="sb-sidenav-menu-heading">Core</div>
@@ -41,7 +41,7 @@
                     @endif
                 </div>
             </div>
-            <div div style="font-family:Century Schoolbook" class="sb-sidenav-footer bg-danger">
+            <div div style="font-family:Century Schoolbook" class="sb-sidenav-footer bg-danger text-white">
                 <div class="small">Logged in as:</div>
                 {{ Auth::user()->name }}
             </div>

@@ -33,7 +33,7 @@ Route::resource('/products', \App\Http\Controllers\ProductController::class)->mi
 Route::middleware('role:admin')->group(function(){
 Route::resource('/roles', \App\Http\Controllers\RoleController::class)->middleware('auth');
 });
-Route::resource('/sliders', \App\Http\Controllers\SliderController::class)->middleware('auth');
+Route::resource('/sliders', \App\Http\Controllers\SlidersController::class)->middleware('auth');
 Route::middleware('role:admin')->group(function(){
 Route::resource('/users', \App\Http\Controllers\UserController::class)->middleware('auth');
 });

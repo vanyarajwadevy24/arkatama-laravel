@@ -93,8 +93,11 @@
 <footer class="bg-dark text-center text-white">
     <!-- Grid container -->
     <!-- Copyright -->
-    <div class="text-center p-3 bg-white text-danger">
-      Vanya Rajwadevy 
+       <div class=" p-3 bg-white text-danger">
+      <ul>Contact Beautify ! </ul>
+      <ul>Instagram : 24.Beautify</ul>
+      <ul>Phone     : (+62) 1234 4545</ul>
+      <ul>Thank You</ul>
       <a class="text-danger" href="https://mdbootstrap.com/"></a>
     </div>
     <!-- Copyright -->
