@@ -12,24 +12,24 @@
     <section id="navbar">
             <nav class="navbar navbar-expand-lg" >
                 <div class="container">
-                  <a class="navbar-brand text-white" href="#"></a>
+                  <a style="font-family:MV Boli" class="navbar-brand text-danger" href="#">Beautify</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link active text-danger" aria-current="page" href="#">Home</a>
+                        <a style="font-family:Century Schoolbook" class="nav-link active text-danger" aria-current="page" href="#">Home</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link active text-danger" href="#content">Products</a>
+                        <a style="font-family:Century Schoolbook" class="nav-link active text-danger" href="#content">Products</a>
                       </li>
                       <li class="nav-item ">
-                        <a class="nav-link active text-danger" href="#footer">About</a>
+                        <a style="font-family:Century Schoolbook" class="nav-link active text-danger" href="#footer">About</a>
                       </li>
                     </ul>
                     <form class="d-flex" role="search" action="/login">  
-                        <button class="btn btn-outline-danger" type="submit">Login</button>
+                        <button style="font-family:Century Schoolbook" class="btn btn-outline-danger" type="submit">Login</button>
                     </form>
                   </div>
                 </div>
@@ -66,8 +66,8 @@
               </div>
     </section>
     <section id="content">
-        <div class="container pt-5 pb-5">
-            <h2 class="mb-3 fst-normal">
+        <div style="font-family:MingLiU-ExtB Bold" class="container pt-5 pb-5">
+            <h2 class="mb-3 fst-normal text-danger">
                 Products
             </h2>
             <div class="row g-4">
@@ -76,10 +76,10 @@
                     <div class="card" style="width: 100%;">
                         <img src="{{ asset('storage/' . $product->gambar) }}" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">{{ $product->nama }}</h5>
-                          <p class="card-text">{{ $product->harga }}</p>
-                          <p class="card-text">{{ $product->deskripsi }}</p>
-                          <a href="#" class="btn btn-danger">Buy</a>
+                          <h5 style="font-family:Century Schoolbook" class="card-title">{{ $product->nama }}</h5>
+                          <p style="font-family:Century Schoolbook" class="card-text">{{ $product->harga }}</p>
+                          <p style="font-family:Century Schoolbook" class="card-text">{{ $product->deskripsi }}</p>
+                          <a href="#" style="font-family:MV Boli" class="btn btn-danger">Buy</a>
                         </div>
                       </div>
                 </div>

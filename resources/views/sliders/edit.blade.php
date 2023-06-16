@@ -4,11 +4,11 @@
     <form action="{{route('sliders.update',$slider)}}" method="post" enctype="multipart/form-data">
         @method ('PUT')
         @csrf
-    <div class="row">
+    <div style="font-family:Century Schoolbook" class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h2>Create</h2>
+                    <h2>Edit</h2>
                     <div class="form-group mb-2">
                         <label for="caption">Caption</label>
                         <textarea type="text" class="form-control @error('caption') is-invalid @enderror" id="caption" placeholder="caption" name="caption">{{ $slider->caption }}</textarea>

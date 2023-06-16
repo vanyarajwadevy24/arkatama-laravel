@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
 
-                    <div class="card mb-4 mt-3">
+                    <div style="font-family:Century Schoolbook" class="card mb-4 mt-3">
                         <div class="card-header">
                             <a href="{{ route('categories.create') }}" class="btn btn-success">Create</a>
                         </div>

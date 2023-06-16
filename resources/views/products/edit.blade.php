@@ -4,7 +4,7 @@
     <form action="{{route('products.update', $product)}}" method="post" enctype="multipart/form-data">
         @method('PUT')
         @csrf
-    <div class="row">
+    <div style="font-family:Century Schoolbook" class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-body">

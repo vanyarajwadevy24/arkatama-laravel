@@ -32,23 +32,23 @@
       @endif
 
         <main class="form-signin">
-            <h1 class="h3 mb-3 fw-normal text-center">Please login</h1>
+        <h1 style="font-family:Comic Sans MS" class="h4 mb-3 fw-normal text-center">Login Beautify</h1>
             <form action="/login" method="post">
               @csrf
-              <div class="form-floating">
+              <div style="font-family:Century Schoolbook" class="form-floating">
                 <input type="email" name="email" class="form-control @error('email') is-invalid" @enderror id="email" placeholder="name@example.com" autofocus required value="{{ old('email') }}">
                 <label for="email">Email address</label>
                 @error('email')
                 {{ $message }}
                 @enderror
               </div>
-              <div class="form-floating mt-3">
+              <div style="font-family:Century Schoolbook" class="form-floating mt-3">
                 <input type="password" name="password" class="form-control" id="password" placeholder="Password">
                 <label for="password">Password</label>
               </div>
-              <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+              <button style="font-family:Century Schoolbook" class="w-100 btn btn-lg btn-danger" type="submit">Login</button>
             </form>
-            <small class="d-block text-center">
+            <small style="font-family:Century Schoolbook" class="d-block text-center">
                 Not Register? <a href="/register">Register Now</a>
             </small>
           </main>

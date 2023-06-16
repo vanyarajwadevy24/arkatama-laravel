@@ -16,10 +16,10 @@
       <div class="row justify-content-center pt-5">
         <div class="col-lg-5">
             <main class="form-registration">
-                <h1 class="h3 mb-3 fw-normal text-center">Please Register</h1>
+                <h1 style="font-family:Comic Sans MS" class="h4 mb-3 fw-normal text-center">Register</h1>
                 <form action="/register" method="post">
                   @csrf
-                    <div class="form-floating">
+                    <div style="font-family:Century Schoolbook" class="form-floating">
                         <input type="text" name='name' class="form-control rounded-top @error('name') is-invalid" @enderror id="name" placeholder="Name" required value="{{ old('name') }}">
                         <label for="name">Name</label>
                         @error('name')
@@ -28,7 +28,7 @@
                         </div> 
                         @enderror
                     </div>
-                    <div class="form-floating">
+                    <div style="font-family:Century Schoolbook"  class="form-floating">
                       <input type="email" name='email' class="form-control @error('email') is-invalid" @enderror id="email" placeholder="name@example.com" required value="{{ old('email') }}">
                       <label for="email">Email address</label>
                       @error('email')
@@ -38,7 +38,7 @@
                       @enderror
                     </div>
     
-                    <div class="form-group mb-2">
+                    <div style="font-family:Century Schoolbook" class="form-group mb-2">
                         <label for="role">Role</label>
                         <select name="role_id" id="role_id">
                             @foreach ($roles as $role)
@@ -48,7 +48,7 @@
                         @error('role') <span class="text-danger">{{$message}}</span> @enderror
                     </div> 
                     
-                  <div class="form-floating">
+                  <div style="font-family:Century Schoolbook" class="form-floating">
                     <input type="password" name='password' class="form-control rounded-bottom @error('password') is-invalid" @enderror  id="password" placeholder="Password">
                     <label for="password">Password</label>
                     @error('password')
@@ -57,9 +57,9 @@
                     </div> 
                     @enderror
                   </div>
-                  <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Register</button>
+                  <button style="font-family:Century Schoolbook" class="w-100 btn btn-lg btn-danger mt-3" type="submit">Register</button>
                 </form>
-                <small class="d-block text-center">
+                <small style="font-family:Century Schoolbook" class="d-block text-center">
                     Already registered? <a href="/login">Login</a>
                 </small>
               </main>

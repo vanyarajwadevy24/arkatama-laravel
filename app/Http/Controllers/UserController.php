@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -16,9 +17,10 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-        return view('users.index' ,[
+        return view('users.index', [
             'users' => $users
         ]);
+        
     }
 
     /**
@@ -30,6 +32,7 @@ class UserController extends Controller
     {
         $roles = Role::all();
         return view('users.create',compact('roles'));
+        
     }
 
     /**
@@ -42,10 +45,11 @@ class UserController extends Controller
     {
         $validated = $request->validate([
             'name' => 'required',
-            'email'  => "required|unique:users,email",
+            'email' => 'required|unique:users,email',
             'password' => 'required|confirmed|min:8',
             'role_id' => 'required'
         ]);
+        $validated['password'] = Hash::make($validated['password']);
         User::create($validated);
         return redirect()->route('users.index');
     }
@@ -85,9 +89,10 @@ class UserController extends Controller
         $validated = $request->validate([
             'name' => 'required',
             "email" => "required|unique:users,email," . $user->id,
-            'password' => 'required|confirmed|min:8' ,
+            'password' => 'required|confirmed|min:8',
             'role_id' => 'required'
         ]);
+        $validated['password'] = Hash::make($validated['password']);
         $user->update($validated);
         return redirect()->route('users.index');
     }
@@ -98,8 +103,17 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+        $user = User::find($id);
+    
+        if ($id == $request->user()->id) return redirect()->route('users.index')
+            ->with('error', 'Anda tidak dapat menghapus diri sendiri.');
+    
+        if ($user) $user->delete();
+    
+        return redirect()->route('users.index')
+            ->with('success', 'Berhasil menghapus user');
+    
     }
 }

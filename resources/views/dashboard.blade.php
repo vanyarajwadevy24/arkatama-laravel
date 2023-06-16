@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
-<h1 class="mt-4">Dashboard</h1>
-                        <div class="row">
+<h1 style="font-family:Century Schoolbook" class="mt-4">Dashboard</h1>
+                        <div style="font-family:Century Schoolbook" class="row">
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
                                     <div class="card-body">User</div>

@@ -3,7 +3,7 @@
 <div class="container mt-3">
     <form action="{{route('products.store')}}" method="post" enctype="multipart/form-data">
         @csrf
-    <div class="row">
+    <div style="font-family:Century Schoolbook" class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
