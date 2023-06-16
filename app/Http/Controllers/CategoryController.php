@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Role;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class CategoryController extends Controller
 {
@@ -43,8 +45,8 @@ class CategoryController extends Controller
         ]);
         Category::create($validated);
         return redirect()->route('categories.index');
-    
     }
+
     /**
      * Display the specified resource.
      *
@@ -62,7 +64,7 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Category $category)
     {
         return view('categories.edit', [
             'category' => $category
@@ -76,12 +78,12 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Category $category)
     {
         $validated = $request->validate([
             'category_name' => 'required'
         ]);
-        $Category->update($validated);
+        $category->update($validated);
         return redirect()->route('categories.index');
     }
 
